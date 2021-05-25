@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шахматная доска</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    
+    
+    <div class="main">
+        
+
+        <div class="numbers">
+            <ul class="numbers_stright">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+                <li>8</li>
+            </ul>
+        </div>
+        <div class="numbers">
+            <ul class="numbers_back">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+                <li>8</li>
+            </ul>
+        </div>
+        <div class="letters">
+            <ul class="letters_stright">
+                <li>a</li>
+                <li>b</li>
+                <li>c</li>
+                <li>d</li>
+                <li>e</li>
+                <li>f</li>
+                <li>g</li>
+                <li>h</li>
+            </ul>
+        </div>
+        <div class="letters">
+            <ul  class="letters_back">
+                <li>a</li>
+                <li>b</li>
+                <li>c</li>
+                <li>d</li>
+                <li>e</li>
+                <li>f</li>
+                <li>g</li>
+                <li>h</li>
+            </ul>
+        </div>
+    </div>
+   
+
+
+<script>
+    var table = document.createElement("table"),tr,td;
+ 
+    
+    for(var i = 1; i <= 8; i++){  // формирование таблицы для доски
+        tr = document.createElement("tr");
+        tr.classList.add("figuri");
+        table.append(tr);
+        for(var j = 1;j <= 8;j++){
+            td = document.createElement("td");
+            td.classList.add("kletka" + ([i]+[j])); // каждой клетке добавила уникаль класс, но неочень красивый
+            td.style.border = "1px solid gray";
+            td.style.width = "50px";
+            td.style.height = "50px";
+            tr.append(td);
+           
+        }
+       
+    }
+ 
+    
+
+ table.classList.add("chess"); 
+ for (var i = 0; i < table.rows.length; i++) {  // заполение цветом ячейки
+  for (var j = 1 - i % 2; j < table.rows.length; j += 2) {
+    table.rows[i].cells[j].style.backgroundColor = 'brown'; // коричные клетки
+  }
+}
+for (var i = 0; i < table.rows.length; i++) {
+  for (var j = i % 2; j < table.rows.length; j += 2) {  // желтые клетки
+    table.rows[i].cells[j].style.backgroundColor = 'yellow';
+  }
+}
+
+
+
+
+// ______________________________________________
+    
+
+
+    table.style.border = "1px solid gray";
+    document.getElementsByTagName("div")[0].append(table);
+    // document.querySelector("div").innerHTML += "&#9816;";
+
+
+// ______________________________________________
+
+document.querySelector(".kletka11").innerHTML += "&#9814;"; //ладья
+document.querySelector(".kletka12").innerHTML += "&#9816;"; //конь
+document.querySelector(".kletka13").innerHTML += "&#9815;"; //офицер 
+document.querySelector(".kletka14").innerHTML += "&#9813;"; //ферзь
+document.querySelector(".kletka15").innerHTML += "&#9812;"; //король
+document.querySelector(".kletka16").innerHTML += "&#9815;"; //офицер
+document.querySelector(".kletka17").innerHTML += "&#9816;"; //конь
+document.querySelector(".kletka18").innerHTML += "&#9814;"; //ладья
+
+
+document.querySelector(".kletka21").innerHTML += "&#9817;"; //пешка
+document.querySelector(".kletka22").innerHTML += "&#9817;"; //пешка
+document.querySelector(".kletka23").innerHTML += "&#9817;"; //пешка
+document.querySelector(".kletka24").innerHTML += "&#9817;"; //пешка
+document.querySelector(".kletka25").innerHTML += "&#9817;";//пешка
+document.querySelector(".kletka26").innerHTML += "&#9817;"; //пешка
+document.querySelector(".kletka27").innerHTML += "&#9817;"; //пешка
+document.querySelector(".kletka28").innerHTML += "&#9817;"; //пешка
+
+
+document.querySelector(".kletka81").innerHTML += "&#9814;"; //ладья
+document.querySelector(".kletka82").innerHTML += "&#9816;"; //конь
+document.querySelector(".kletka83").innerHTML += "&#9815;"; //офицер 
+document.querySelector(".kletka84").innerHTML += "&#9813;"; //ферзь
+document.querySelector(".kletka85").innerHTML += "&#9812;"; //король
+document.querySelector(".kletka86").innerHTML += "&#9815;"; //офицер
+document.querySelector(".kletka87").innerHTML += "&#9816;"; //конь
+document.querySelector(".kletka88").innerHTML += "&#9814;"; //ладья
+
+document.querySelector(".kletka71").innerHTML += "&#9817;"; //пешка
+document.querySelector(".kletka72").innerHTML += "&#9817;"; //пешка
+document.querySelector(".kletka73").innerHTML += "&#9817;"; //пешка
+document.querySelector(".kletka74").innerHTML += "&#9817;"; //пешка
+document.querySelector(".kletka75").innerHTML += "&#9817;";//пешка
+document.querySelector(".kletka76").innerHTML += "&#9817;"; //пешка
+document.querySelector(".kletka77").innerHTML += "&#9817;"; //пешка
+document.querySelector(".kletka78").innerHTML += "&#9817;"; //пешка
+
+
+</script>
+
+   
+    
+
+
+</body>
+</html>

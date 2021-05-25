@@ -1,0 +1,72 @@
+.chess{
+    
+}
+ ul{
+    list-style-type: none;
+ }
+ .letters_stright{
+    margin-left: 103px;
+ }
+ .letters_stright li{
+     display: inline;
+     padding-left: 42px;
+
+     
+ }
+ .letters_back{
+    margin-left: 184px;
+    transform: rotate(180deg);
+    margin-top: 515px;
+ }
+
+ .letters_back li{
+    display: inline;
+    padding-left: 42px;
+}
+.numbers_stright{
+    margin-top: 58px;
+}
+.numbers_back{
+    margin-top: 58px;
+    transform: rotate(180deg);
+    margin-left: 604px;
+
+}
+
+.numbers_stright li{
+    margin-left: 90px;
+    line-height: 53px;
+}
+.numbers_back li{
+    line-height: 53px;
+    /* margin-left: 563px; */
+    
+}
+
+
+.main{
+    display: flex;
+}
+.chess{
+    position: relative;
+    margin-top: 46px;
+    margin-left: 144px;
+}
+.numbers{
+    position: absolute;
+}
+.letters{
+    position: absolute;
+}
+.kletka11, .kletka12, .kletka13, .kletka14, .kletka15, .kletka16, .kletka17, .kletka18, .kletka21, .kletka22, .kletka23, .kletka24, .kletka25, .kletka26, .kletka27, .kletka28{
+    text-align: center;
+    font-size: 30px;
+    color: white;
+}
+
+.kletka81, .kletka82, .kletka83, .kletka84, .kletka85, .kletka86, .kletka87, .kletka88, .kletka71, .kletka72, .kletka73, .kletka74, .kletka75, .kletka76, .kletka77, .kletka78{
+    text-align: center;
+    font-size: 30px;
+   transform: rotate(180deg);
+}
+
